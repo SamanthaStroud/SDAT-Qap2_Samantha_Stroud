@@ -26,6 +26,7 @@ public class BookService {
         return bookRepository.save(book);
     }
 
+    // Update an existing book by its ID
     public Book updateBook(Long id, Book updatedBook) {
         Book existing = bookRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Book not found with id: " + id));
